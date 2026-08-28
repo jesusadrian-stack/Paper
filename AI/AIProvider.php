@@ -1,4 +1,6 @@
 <?php
+
+//git diff (Sirve)
 /**
  * AI Provider: Motor de Inteligencia Artificial para Análisis de Papelería
  * Diseñado de forma desacoplada con motor analítico local y driver para API externa (Gemini/OpenAI)
@@ -8,7 +10,7 @@ interface AIProviderInterface {
     public function generateAnalysis(string $prompt, array $contextData): array;
 }
 
-class LocalAIProvider implements AIProviderInterface {
+class LocalAIProvider implement AIProviderInterface {
     public function generateAnalysis(string $prompt, array $contextData): array {
         // Motor analítico local basado en reglas heurísticas y análisis estadístico de negocio
         $type = $contextData['type'] ?? 'GENERAL';
