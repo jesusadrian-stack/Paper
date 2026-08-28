@@ -10,7 +10,7 @@ interface AIProviderInterface {
     public function generateAnalysis(string $prompt, array $contextData): array;
 }
 
-class LocalAIProvider implement AIProviderInterface {
+class LocalAIProvider implements AIProviderInterface {
     public function generateAnalysis(string $prompt, array $contextData): array {
         // Motor analítico local basado en reglas heurísticas y análisis estadístico de negocio
         $type = $contextData['type'] ?? 'GENERAL';
